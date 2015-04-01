@@ -6,7 +6,12 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'comments#index'
-   resources :comments
+   resources :comments do
+     member do
+       post 'liked'
+     end
+   end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,1 +1,3 @@
-<h1><%= comment.comment %></h1>
+<li><%= comment.comment %>
+  <%= button_to "like", liked_comment_path(comment), remote: true %>
+  <span id="like-<%= comment.id %>"><%= pluralize(comment.likes.count, "like") %></span></li>

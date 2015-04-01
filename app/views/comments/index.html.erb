@@ -3,9 +3,6 @@
   <%= f.submit %>
 <% end %>
 
-<ul id="comments">
-
-<% @comments.each do |comment| %>
-  <li><%= comment.comment %></li>
-<% end %>
+<ul id='comments'>
+  <%= render @comments %>
 </ul>
