@@ -29,6 +29,14 @@ class CommentsController < ApplicationController
     end
   end
 
+  # def like 
+  #   @comment = Comment.find(params[:id])
+  #   @comment.likes += 1
+  #   @comment.save
+  # end
+  # could have added a likes column to comments as an integer and did @comment.likes +=1 instead
+  # of doing a whole other table
+
 private
   def comment_params
     params.require(:comment).permit(:comment)
